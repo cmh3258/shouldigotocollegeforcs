@@ -1,0 +1,69 @@
+
+body {
+  padding: 0;
+}
+
+/* absolution positing elements - the info */
+.back-btn{
+  position: absolute;
+  top: 2em;
+  left: 3em;
+}
+.center-top-label{
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.bottom-right-label{
+  position: absolute;
+  bottom: 2em;
+  right: 3em;
+}
+.bottom-left-label{
+  position: absolute;
+  bottom: 2em;
+  left: 3em;
+}
+
+/* sections */
+section{
+  text-align: center;
+}
+section:nth-of-type(1){
+  margin-top: 9em;
+}
+.options{}
+.option{
+  display: inline-block;
+  padding: 1em;
+}
+
+/* style headers */
+h1{
+  font-size: 34px;
+}
+h2{
+  font-size: 20px;
+  font-weight: lighter;
+}
+figure{
+  cursor: pointer;
+
+}
+figure:hover img{
+  font-size: 17px;
+}
+figure figcaption{
+  font-size: 16px;
+  margin-top: 13px;
+}
+figure img{
+  width: 10em;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+}
