@@ -21,18 +21,18 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'Cant write a line of code, aka got no skills',
+            'img':'detective.png',
+            'caption':'Cant write a line of code, aka got no skills', //computer crossed out
             'alt':'no skills'
           },
           {
-            'img':'',
-            'caption':'Eh, somewhere in between',
+            'img':'route.png',
+            'caption':'Eh, somewhere in between', //in between computer and something
             'alt':'in between'
-          }
+          },
           {
-            'img':'',
-            'caption':'Made a sick app or website',
+            'img':'computer-1.png',
+            'caption':'Made a sick app or website', //shows web and phone
             'alt':'sick app'
           },
         ]
@@ -42,18 +42,18 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'Apps and Websites',
+            'img':'browser.png',
+            'caption':'Apps and Websites', //shows web and phone
             'alt':'apps and webs'
           },
           {
-            'img':'',
-            'caption':'Systems',
+            'img':'smartwatch.png',
+            'caption':'Systems',  //nasa, tesla, etc.
             'alt':'sys'
           },
           {
-            'img':'',
-            'caption':'Hardware',
+            'img':'motherboard.png',
+            'caption':'Hardware', //hardware
             'alt':'hardware'
           }
         ]
@@ -63,13 +63,13 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'Nope',
+            'img':'tired.png',
+            'caption':'Nope', //lonely on a bench
             'alt':'no'
           },
           {
-            'img':'',
-            'caption':'Sure do',
+            'img':'employee.png',
+            'caption':'Sure do', //at comp working
             'alt':'yes'
           }
         ]
@@ -79,13 +79,13 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'I don\'t really care',
+            'img':'sleep.png',
+            'caption':'I don\'t really care', //too cool
             'alt':'no'
           },
           {
-            'img':'',
-            'caption':'Yes',
+            'img':'pint.png',
+            'caption':'Yes', //grad cap
             'alt':'yes'
           }
         ]
@@ -95,18 +95,18 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'I\'m broke',
+            'img':'coins.png',
+            'caption':'I\'m broke', //money crossed out
             'alt':'no'
           },
           {
-            'img':'',
-            'caption':'Got some, but probably not',
+            'img':'money.png',
+            'caption':'Got some, but probably not', //one dollar
             'alt':'maybe'
           },
           {
-            'img':'',
-            'caption':'Yeah I got the dough',
+            'img':'strongbox.png',
+            'caption':'Yeah I got the dough', //stacks
             'alt':'yes'
           }
         ]
@@ -116,31 +116,29 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'Not at the moment',
+            'img':'sleep-2.png',
+            'caption':'Not at the moment', //sad face
             'alt':'no'
           },
           {
-            'img':'',
-            'caption':'Yessssssir',
+            'img':'employees.png',
+            'caption':'Yessssssir', //happy face
             'alt':'yes'
           }
         ]
       },
-      
-      
       {
         'question':'Are you a creative who loves to problem solve?',
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'Not so much',
+            'img':'calculator.png',
+            'caption':'Not so much', //boring person
             'alt':'no'
           },
           {
-            'img':'',
-            'caption':'Duh',
+            'img':'puzzle.png',
+            'caption':'Duh', //fun person
             'alt':'yes'
           },
         ]
@@ -150,13 +148,13 @@ angular.module('shouldigotocollegeforcsApp')
         'description':'',
         'options':[
           {
-            'img':'',
-            'caption':'We all gonna die!',
+            'img':'coffin.png',
+            'caption':'We all gonna die!', //doom
             'alt':'no'
           },
           {
-            'img':'',
-            'caption':'Ohhhh that’s exciting',
+            'img':'future.png',
+            'caption':'Ohhhh that’s exciting', //future
             'alt':'yes'
           }
         ]
