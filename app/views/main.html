@@ -1,14 +1,19 @@
 
-<div class="back-btn">Back</div>
+<div class="back-btn" ng-click="restart()">Restart</div>
 <div class="center-top-label">Should I Go To College For CS?</div>
 
-<section ng-repeat="question in questions">
+<section ng-hide="start">
+  <h1>Should I Go To College For CS?</h1>
+  <button ng-click="start = true">Start</button>
+</section>
+
+<section ng-repeat="question in questions track by $index" ng-if="start" ng-show="question.showing">
   <h1>{{question.question}}</h1>
   <h2>{{question.description}}</h2>
 
   <div class="options">
     <div class="option" ng-repeat="option in question.options">
-      <figure ng-click="">
+      <figure ng-click="submitAnswer(option.answer)">
         <div class="circle-container">
           <img ng-src="icons/{{option.img}}" alt="{{option.alt}}">
         </div>
@@ -16,6 +21,11 @@
       </figure>
     </div>
   </div>
+</section>
+
+<section ng-if="highestAnswerLetter == 'A'">
+  <h1>A</h1>
+  <!-- <button ng-click="start = true">Start</button> -->
 </section>
 
 <div class="bottom-right-label">3/{{question.length}}</div>
