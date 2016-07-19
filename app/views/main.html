@@ -1,6 +1,6 @@
 
-<div class="back-btn" ng-click="restart()">Restart</div>
-<div class="center-top-label">Should I Go To College For CS?</div>
+<div class="back-btn" ng-show="start" ng-click="restart()">Restart</div>
+<div class="center-top-label" ng-show="start">Should I Go To College For CS?</div>
 
 <section ng-hide="start">
   <h1>Should I Go To College For CS?</h1>
@@ -28,5 +28,5 @@
   <!-- <button ng-click="start = true">Start</button> -->
 </section>
 
-<div class="bottom-right-label">3/{{question.length}}</div>
+<div class="bottom-right-label" ng-show="start">{{$index}}/{{questions.length}}</div>
 <div class="bottom-left-label">about / contact</div>

@@ -29,7 +29,7 @@ angular.module('shouldigotocollegeforcsApp')
           },
           {
             'img':'route.png',
-            'caption':'Eh, somewhere in between', //in between computer and something
+            'caption':'Eh, in between', //in between computer and something
             'alt':'in between',
             'answer':'C,B'
           },

@@ -8,6 +8,10 @@ body {
   position: absolute;
   top: 2em;
   left: 3em;
+  cursor: pointer;
+}
+.back-btn:hover{
+  color: purple;
 }
 .center-top-label{
   position: absolute;
@@ -46,15 +50,33 @@ section{
   height: 10em;
   width: 10em;
   transition: background-color 0.3s ease;
+  margin: 0 auto;
 }
 
 /* style headers */
 h1{
   font-size: 34px;
+  font-family: Montserrat Alternates;
+  color: #212121;
 }
 h2{
   font-size: 20px;
   font-weight: lighter;
+  color: #404040;
+
+}
+div{
+  font-family: Roboto Mono;
+}
+button, a{
+  font-family: Mitr;
+}
+button{
+  padding: 10px 27px;
+  box-shadow: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
 }
 figure{
   cursor: pointer;
@@ -69,6 +91,9 @@ figure:hover img{
 figure figcaption{
   font-size: 16px;
   margin-top: 13px;
+  font-family: Roboto Mono;
+  color: #404040;
+
 }
 figure img{
   width: 44%;
