@@ -23,7 +23,7 @@ angular.module('shouldigotocollegeforcsApp')
         'options':[
           {
             'img':'detective.png',
-            'caption':'No skillz', //computer crossed out
+            'caption':'No skills', //computer crossed out
             'alt':'no skills',
             'answer':'E'
           },
@@ -35,7 +35,7 @@ angular.module('shouldigotocollegeforcsApp')
           },
           {
             'img':'computer-1.png',
-            'caption':'Made a sick app or website', //shows web and phone
+            'caption':'Quite a lot', //shows web and phone
             'alt':'sick app',
             'answer':'B'
           },

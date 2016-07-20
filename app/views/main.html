@@ -2,8 +2,15 @@
 <div class="back-btn" ng-show="start" ng-click="restart()">Restart</div>
 <div class="center-top-label" ng-show="start">Should I Go To College For CS?</div>
 
-<section ng-hide="start">
+<div class="top-right-label">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank" class="fb-share">Share</a>
+  <a class="twitter-share-button t-share" href="https://twitter.com/intent/tweet?text=Hello%20world" target="_blank">Tweet</a>
+</div>
+
+<section ng-hide="start" id="start">
+  <img src="icons/school.svg"/>
   <h1>Should I Go To College For CS?</h1>
+  <h2>Computer Science(CS) has many different topics. In today's world a 4-year college might not be necessary to pursue your dreams. Use this tool to find what is best for you.</h2>
   <button ng-click="start = true">Start</button>
 </section>
 
@@ -21,6 +28,8 @@
       </figure>
     </div>
   </div>
+  
+  <div class="bottom-right-label">{{$index}}/{{questions.length}}</div>
 </section>
 
 <section ng-if="highestAnswerLetter == 'A'">
@@ -28,5 +37,7 @@
   <!-- <button ng-click="start = true">Start</button> -->
 </section>
 
-<div class="bottom-right-label" ng-show="start">{{$index}}/{{questions.length}}</div>
-<div class="bottom-left-label">about / contact</div>
+<div class="bottom-left-label">
+  <p>about / contact</p>
+  <p class="credit">inspired by <a href="http://www.crew.co" target="_blank">crew</a> icons by <a href="http://www.flaticon.com" target="_blank">flat icon</a></p>
+  </div>
