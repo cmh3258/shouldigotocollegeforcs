@@ -21,6 +21,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  grunt.loadNpmTasks('grunt-postcss');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -46,7 +48,7 @@ module.exports = function (grunt) {
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        tasks: ['newer:copy:styles', 'postcss'] //autoprefixer
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -153,28 +155,49 @@ module.exports = function (grunt) {
     },
 
     // Add vendor prefixed styles
-    autoprefixer: {
+    // autoprefixer: {
+    //   options: {
+    //     browsers: ['last 1 version']
+    //   },
+    //   server: {
+    //     options: {
+    //       map: true,
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '.tmp/styles/',
+    //       src: '{,*/}*.css',
+    //       dest: '.tmp/styles/'
+    //     }]
+    //   },
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '.tmp/styles/',
+    //       src: '{,*/}*.css',
+    //       dest: '.tmp/styles/'
+    //     }]
+    //   }
+    // },
+
+    postcss: {
       options: {
-        browsers: ['last 1 version']
-      },
-      server: {
-        options: {
-          map: true,
+        map: true, // inline sourcemaps
+
+        // or
+        map: {
+            inline: false, // save all sourcemaps as separate files...
+            annotation: 'dist/css/maps/' // ...to the specified directory
         },
-        files: [{
-          expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
-          dest: '.tmp/styles/'
-        }]
+
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+          require('cssnano')() // minify the result
+        ]
       },
       dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
-          dest: '.tmp/styles/'
-        }]
+        src: 'css/*.css'
       }
     },
 
@@ -250,15 +273,15 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -398,7 +421,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
-      'autoprefixer:server',
+      // 'autoprefixer:server',
       'connect:livereload',
       'watch'
     ]);
@@ -413,7 +436,7 @@ module.exports = function (grunt) {
     'clean:server',
     'wiredep',
     'concurrent:test',
-    'autoprefixer',
+    // 'autoprefixer',
     'connect:test',
     'karma'
   ]);
@@ -423,7 +446,8 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
+    // 'autoprefixer',
+    'postcss',
     'concat',
     'ngAnnotate',
     'copy:dist',
