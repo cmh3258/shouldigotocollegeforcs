@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angulartics',
+    'angulartics.google.analytics'
   ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -8,7 +8,7 @@
  * Controller of the shouldigotocollegeforcsApp
  */
 angular.module('shouldigotocollegeforcsApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $analytics) {
     
     $scope.highestAnswerLetter = null;
 
@@ -253,12 +253,13 @@ angular.module('shouldigotocollegeforcsApp')
             highestAnswerLetter = key;
           }
         }
-        console.log(answersDict);
         if(answersDict['A'] == 2){
-          $scope.highestAnswerLetter =$scope.answers.A;
+          $scope.highestAnswerLetter = $scope.answers.A;
+          $analytics.eventTrack('answer', {  letter: 'A' });
         }
         else{
           $scope.highestAnswerLetter = $scope.answers[highestAnswerLetter];
+          $analytics.eventTrack('answer', {  letter: highestAnswerLetter  });
         }
 
       }
