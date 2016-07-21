@@ -387,6 +387,33 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+      options: {
+          dir: 'dist',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      // staging: {
+      //   options: {
+      //     remote: 'https://git.heroku.com/harvest-staging-app.git',
+      //     branch: 'master'
+      //   }
+      // },
+      // production: {
+      //   options: {
+      //     remote: 'https://git.heroku.com/harvest-delivery.git',
+      //     branch: 'master'
+      //   }
+      // },
+      heroku: {
+          options: {
+              remote: 'https://git.heroku.com/collegeforcs.git',
+              branch: 'master'
+          }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -464,4 +491,7 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', ['buildcontrol']);
+
 };
