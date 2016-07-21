@@ -32,9 +32,12 @@
   <div class="bottom-right-label">{{$index}}/{{questions.length}}</div>
 </section>
 
-<section ng-if="highestAnswerLetter == 'A'">
-  <h1>A</h1>
-  <!-- <button ng-click="start = true">Start</button> -->
+<section ng-if="highestAnswerLetter !== null" class="answer">
+<!-- <section ng-if="true" class="answer"> -->
+  <img ng-src="icons/{{highestAnswerLetter.img}}"/>
+  <h1>{{highestAnswerLetter.title}}</h1>
+  <h2>{{highestAnswerLetter.description}}</h2>
+  <div class="bottom-right-label">{{questions.length}}/{{questions.length}}</div>
 </section>
 
 <div class="bottom-left-label">

@@ -9,11 +9,8 @@
  */
 angular.module('shouldigotocollegeforcsApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    
+    $scope.highestAnswerLetter = null;
 
     $scope.questions = [
       {
@@ -188,10 +185,43 @@ angular.module('shouldigotocollegeforcsApp')
       }
     ]
 
+    $scope.answers = {
+      'A':{
+        'title':'Stay at your job',
+        'img':'stay_job.svg',
+        'description':'If you love your job, stay at it. Take every opportunity to grow and learn from those who are above you and leading you.'
+      },
+      'B':{
+        'title':'Go get a job',
+        'img':'get_job.svg',
+        'description':'You have the skills, you are determined and love developing, puts those to use. Plus, get that money!'
+      },
+      'C':{
+        'title':'College!',
+        'img':'college.svg',
+        'description':'If you desire the college experience, then you should do it. College is great and will grow you tremendously.'
+      },
+      'D':{
+        'title':'Dev School',
+        'img':'dev_school.svg',
+        'description':'There are many school\'s you can go to that are less expensive than college, but can teach you the necessary skills to get you a developer position. Some online, and some in your local area. Check out a few below.'
+      },
+      'E':{
+        'title':'This might not be for you',
+        'img':'other_job.svg',
+        'description':'Not everyone has to be a programmer. We need architects, cooks, salesmen, CEO\'s, and so much more. You do you, and change the world.'
+      }
+    };
+
+    // $scope.highestAnswerLetter = $scope.answers.E;
+
+
     $scope.restart = function(){
       $scope.highestAnswerLetter = null;
       answersDict = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0};
       $scope.start = false;
+      currentIndex = 0;
+      $scope.questions[0].showing = true;
     }
 
     var currentIndex = 0;
@@ -223,8 +253,14 @@ angular.module('shouldigotocollegeforcsApp')
             highestAnswerLetter = key;
           }
         }
-        console.log('highestAnswer = ', highestAnswer, highestAnswerLetter);
-        $scope.highestAnswerLetter = highestAnswerLetter;
+        console.log(answersDict);
+        if(answersDict['A'] == 2){
+          $scope.highestAnswerLetter =$scope.answers.A;
+        }
+        else{
+          $scope.highestAnswerLetter = $scope.answers[highestAnswerLetter];
+        }
+
       }
       else{
         $scope.questions[currentIndex].showing = true;

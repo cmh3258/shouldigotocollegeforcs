@@ -154,6 +154,22 @@ figure img{
   text-decoration: none;
 }
 
+.answer{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 9em;
+  background: #efefef;
+  padding: 3em;
+  border-radius: 9px;
+  box-shadow: 1px 2px 2px #a0a0a0;
+}
+.answer h1{
+  color: #3400c1;
+}
+.answer img{
+  width: 4em;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
