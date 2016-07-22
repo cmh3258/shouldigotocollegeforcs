@@ -37,8 +37,57 @@
   <img ng-src="icons/{{highestAnswerLetter.img}}"/>
   <h1>{{highestAnswerLetter.title}}</h1>
   <h2>{{highestAnswerLetter.description}}</h2>
-  <div class="bottom-right-label">{{questions.length}}/{{questions.length}}</div>
 </section>
+
+<section ng-if="highestAnswerLetter.title === 'Dev School'" class="choices">
+  <div>
+    <figure>
+      <img ng-src="icons/freecodecamp.png" alt="freecodecamp" class="circle-logo">
+      <figcaption>
+        <h3><a href="https://www.freecodecamp.com/" target="_blank">Freecodecamp</a></h3>
+        <p>"Learn to code and build projects for nonprofits. Build your full stack web development portfolio today."</p>
+        <a href="https://www.freecodecamp.com/" target="_blank">learn more</a>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img ng-src="icons/devbootcamp.png" alt="devbootcamp" class="normal-logo">
+      <figcaption>
+        <h3><a href="https://www.devbootcamp.com/" target="_blank">Dev Bootcamp</a></h3>
+        <p>"Become a web developer at Dev Bootcamp, the first short-term, immersive bootcamp that transforms beginners into full-stack web developers."</p>
+        <a href="http://devbootcamp.com/" target="_blank">learn more</a>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img ng-src="icons/treehouse.png" alt="treehouse" class="normal-logo">
+      <figcaption>
+        <h3><a href="https://teamtreehouse.com/" target="_blank">Treehouse</a></h3>
+        <p>"Treehouse has a library of lessons that goes far beyond the surface, touching nearly every aspect of how to design and develop for the web and iOS."</p>
+        <a href="https://teamtreehouse.com/" target="_blank">learn more</a>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img ng-src="icons/ironyard.png" alt="ironyard" class="normal-logo">
+      <figcaption>
+        <h3><a href="https://www.theironyard.com/" target="_blank">Ironyard</a></h3>
+        <p>"The Iron Yard is an intensive 3 month code school dedicated to providing exceptional growth and mentorship for our students."</p>
+        <a href="https://www.theironyard.com/" target="_blank">learn more</a>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img ng-src="icons/makersquare.png" alt="makersquare" class="normal-logo">
+      <figcaption>
+        <h3><a href="https://www.makersquare.com/" target="_blank">Makersquare</a></h3>
+        <p>"MakerSquare isn't your typical coding bootcamp. Our grads work as Software Engineers at companies like NASA, Facebook & Google in Austin, Los Angeles, San Francisco and New York City."</p>
+        <a href="https://www.makersquare.com/" target="_blank">learn more</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 
 <div class="bottom-left-label">
   <p>about / contact</p>

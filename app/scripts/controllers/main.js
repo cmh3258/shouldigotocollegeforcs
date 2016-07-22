@@ -28,7 +28,7 @@ angular.module('shouldigotocollegeforcsApp')
             'img':'route.png',
             'caption':'Eh, in between', //in between computer and something
             'alt':'in between',
-            'answer':'C,B'
+            'answer':'C'
           },
           {
             'img':'computer-1.png',
@@ -253,6 +253,7 @@ angular.module('shouldigotocollegeforcsApp')
             highestAnswerLetter = key;
           }
         }
+        console.log(answersDict);
         if(answersDict['A'] == 2){
           $scope.highestAnswerLetter = $scope.answers.A;
           $analytics.eventTrack('answer', {  letter: 'A' });
