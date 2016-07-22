@@ -147,7 +147,7 @@ figure img{
   position: absolute;
   left: 3em;
   font-size: 13px;
-  bottom:0;
+  margin-top: 2em;
 }
 .credit{
   font-size: 11px;
@@ -190,6 +190,7 @@ figure img{
   }
   .bottom-left-label{
     bottom: 2em;
+    margin-top: 0;
   }
   .center-top-label{
     display: inline-block;
