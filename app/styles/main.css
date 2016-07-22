@@ -211,6 +211,11 @@ figure img{
   width: 4em;
 }
 
+#contact{
+  color: purple;
+  text-decoration: none;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 1200px) {
   h1{
